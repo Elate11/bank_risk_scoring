@@ -1,14 +1,36 @@
 # Conformal Risk Scoring
 
-Project for Uncertainty Quantification and Conformal Prediction in credit scoring.
+Проект для оценки неопределенности и применения конформного прогнозирования в кредитном скоринге.
 
-## How to run
-1. `make setup`
-2. `make data`
-3. `make train`
-4. `make test`
+## Как запустить
 
-## Components
-- `configs/`: Parameters
-- `src/`: Core ML logic
-- `tests/`: Validation
+### 1. Подготовка окружения
+Установите зависимости:
+```bash
+make setup
+```
+
+### 2. Подготовка данных и обучение
+Сгенерируйте данные и обучите модель:
+```bash
+make data
+make train
+```
+
+### 3. Запуск бизнес-симуляции
+Для получения отчета по заявкам в терминале выполните:
+```bash
+PYTHONPATH=. python3 src/simulate.py
+```
+
+### 4. Визуализация
+Для генерации графиков (Reliability Diagram и Coverage Curve) выполните:
+```bash
+PYTHONPATH=. python3 -c "from src.visualize import plot_reliability_diagram; # Логика вызова визуализации будет добавлена позже"
+```
+*(Примечание: Убедитесь, что модель обучена перед запуском визуализации).*
+
+## Компоненты
+- `configs/`: Параметры проекта.
+- `src/`: Основной ML код.
+- `tests/`: Тесты для валидации системы.
