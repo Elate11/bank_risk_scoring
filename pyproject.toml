@@ -1,0 +1,19 @@
+[project]
+name = "conformal-risk-scoring"
+version = "0.1.0"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "lightgbm",
+    "mapie",
+    "netcal",
+    "pytest",
+    "pyyaml",
+    "matplotlib",
+    "seaborn",
+    "loguru"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

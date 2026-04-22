@@ -1,0 +1,22 @@
+model:
+  learning_rate: 0.05
+  max_depth: 4
+  n_estimators: 300
+  random_state: 42
+
+data:
+  n_samples: 50000
+  n_features: 20
+  class_sep: 0.8
+  weights: [0.85, 0.15]
+  test_size: 0.2
+  calib_size: 0.2
+
+conformal:
+  alpha: 0.1
+  method: "top_k"
+
+costs:
+  C_FP: 100000
+  C_FN: -50000
+  C_MANUAL: 5000
